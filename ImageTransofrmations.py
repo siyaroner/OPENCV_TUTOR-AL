@@ -1,4 +1,5 @@
 import cv2 as cv
+import numpy as np
 
 img=cv.imread("data/photos/kitten1.jpg")
 cv.imshow("Kitten",img)
@@ -13,6 +14,6 @@ def translate(img,w,h):
 # x->right
 # y ->down
 translated=translate(img,100,200)
-cv.imshow("Translatedtranslate")   
+cv.imshow("Translatedtranslate",translated)   
 cv.waitKey(0)
-cv.destroyAllWindows()
+# cv.destroyAllWindows()
