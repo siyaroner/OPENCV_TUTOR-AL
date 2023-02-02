@@ -6,12 +6,12 @@ haar_cascade=cv.CascadeClassifier("haar_face.xml")
 
 celebrities=[] # ['Brad Pitt', 'Dwayne Johnson', 'Henry Cavill', 'Robert Downey Jr', 'Tom Cruise']
 j=0
-for i in os.listdir(r"D:\DataScienceTutorial\data\FaceRecognition\Faces\train"):
+for i in os.listdir(r"D:\DataScienceTutorial\data\FaceRecognition\Faces\val"):
     celebrities.append(i)
     j+=1
     if j==5:
         break
-print(celebrities)
+# print(celebrities)
 
 features=np.load("features.npy",allow_pickle=True)
 labels=np.load("labels.npy")
@@ -19,7 +19,7 @@ labels=np.load("labels.npy")
 face_recognizer=cv.face.LBPHFaceRecognizer_create()
 face_recognizer.read("face_trained.yml")
 
-img=cv.imread(r"D:\DataScienceTutorial\data\FaceRecognition\Faces\train\Brad Pitt\Brad Pitt_12.jpg")
+img=cv.imread(r"D:\DataScienceTutorial\data\FaceRecognition\Faces\val\Brad Pitt\Brad Pitt_99.jpg")
 
 gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 cv.imshow("gray",gray)
