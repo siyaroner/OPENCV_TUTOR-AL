@@ -33,3 +33,5 @@ cv.waitKey(0)
 #         break
 # capture.release()
 # cv.destroyAllWindows()
+ # writing image
+cv.imwrite("data/photos/kitten_written.jpg",img)
