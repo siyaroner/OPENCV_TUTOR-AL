@@ -16,6 +16,7 @@ cv.createTrackbar("UV","Tracking",255,255,nothing) #upper value
 
 while True:
     frame =cv.imread("data/photos/trafficlight.jpg")
+    # _,frame=cv.read()
     hsv=cv.cvtColor(frame,cv.COLOR_BGR2HSV)
     # l_r=np.array([140,140,20])
     # u_r=np.array([255,255,255])
@@ -41,5 +42,7 @@ while True:
     key=cv.waitKey(1)
     if key==ord(" "):
         break
+
+# cap.release()
 cv.destroyAllWindows()
 
